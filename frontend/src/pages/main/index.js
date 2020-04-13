@@ -20,6 +20,9 @@ export default class Main extends Component{
         const {words} =this.state;
         return(
             <div className="word-list">
+                <div>
+                     <Link className = "btn" to = "/cadastro"> Cadastrar nova palavra</Link>
+                </div>
                 {this.state.wordEnglish}
                 {words.map(word =>(
                 <article key={word._id}>

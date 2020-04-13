@@ -1,8 +1,9 @@
 import React from 'react';
-import './style.css'
+import './style.css';
+
 const Header = () => (
     <header id= "mheader">
-        Project English
+        <h1>Project English</h1>
     </header>
 );
 
