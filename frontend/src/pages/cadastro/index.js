@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './style.css'
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import api from '../../services/api'
 
 export default function NewWord() {
@@ -8,7 +8,8 @@ export default function NewWord() {
     const[wordPortuguese, setwordPortuguese] = useState('')
     const[Description, setDescription] = useState('')
     const[Syno, setSyno] = useState('')
-  
+    const history = useHistory();
+
     async function handleNewWord(e){
         e.preventDefault();
     
@@ -21,23 +22,18 @@ export default function NewWord() {
 
         try{
             await api.post('words',data)
-            alert("jhenny");
         }catch(err){
             alert("Erro ao cadastrar palavra")
         }
-
-        console.log(data);
+        history.push('/');
     }
     return (
         
-        <div className = "new-container">
+        <div className = "word-container">
             <div className="content">
                 <section className = "form">
                     <h1>Cadastrar nova palavra</h1>
-                    <p>Descreva a palavra detalhadamente para melhorar o resultado</p>
-                    <Link className="back-link" to = "/">
-                    Voltar 
-                    </Link>
+                    <Link className="back-link" to = "/"> Voltar </Link>
                 </section>
                     
                 <form  onSubmit = {handleNewWord} >

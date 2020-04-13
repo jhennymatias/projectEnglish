@@ -8,8 +8,9 @@
 }
 
 .word-info h1{
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
+    padding: 40px;
 }
 
 .word-info p{

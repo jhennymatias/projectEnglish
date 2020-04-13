@@ -1,46 +1,52 @@
-.new-container{
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+.word-container{
     width: 100%;
     max-width: 1120px;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.new-container .content{
+.word-container .content{
     widows: 100%;
     padding: 90px;
     background: #f0f0f5;
     box-shadow: 0 0 200px rgba(0,0,0,0.1);
     border-radius: 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.new-container .content section{
+.word-container .content section{
     width: 100%;
     max-width: 380px;
     margin-right: 9px;
 }
 
-.new-container .content section h1{
-    margin: 64px 0 32px;
+.word-container .content section h1{
+    margin: 32px 0 32px;
     font-size: 32px;
 }
 
-.new-container .content section p{
+.word-container .content section p{
     font-size: 18px;
     color: #737380;
     line-height: 32px;
 }
 
-.new-container .content form{
+.word-container .content form{
     width: 100%;
     max-width: 450px;
 }
 
-.new-container .content form input, .new-container .content form textarea{
+.word-container .content form input{
     margin-top: 8px;
+    font: 400 14px, Roboto, sans-serif;
 }
 
+.word-container .content form textarea{
+    margin-top: 8px;
+    font: 400 14px, Roboto, sans-serif;
+}

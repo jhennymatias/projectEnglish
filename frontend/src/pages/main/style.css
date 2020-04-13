@@ -1,9 +1,18 @@
 .word-list{
-    max-width:700px;
-    margin: 20px auto 0;
-    padding: 0 20px;
+    margin: 32px auto 0;
+    padding: 0 30px;
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
 }
 
+.novobtn{
+    max-width:1120px;
+    margin: 32px auto 0;
+    padding: 0 30px;
+}
 .word-list article{
     background-color: #fff;
     border: 1px solid #ddd;
@@ -13,6 +22,7 @@
     font-size: 35px;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .word-list article strong{
@@ -41,36 +51,21 @@
     background-color: #054f77;
 }
 
-.word-list .actions{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.novobtn{
+    margin-bottom: 10px;
 }
 
-.word-list .actions button{
-    padding: 10px;
-    border-radius: 5px;
-    border:0;
-    background: #054f77;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.2s;
-    cursor: pointer;
+.word-list .trash button{
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border: 0;
+    background-color: white;
 }
 
-.word-list .actions button:hover{
-    background-color: #fff;
-    color: #054f77;
-    border: 1px solid #054f77;
+.word-list .trash button:hover{
+    opacity: 0.8;
 }
 
-.word-list .actions button:disabled{
-    opacity: 0.7;
-    cursor:default;
-}
 
-.word-list .actions button:disabled:hover{
-    background: #054f77;
-    color: #fff;
-}
+
