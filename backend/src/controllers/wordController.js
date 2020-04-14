@@ -23,7 +23,10 @@ module.exports = {
         const word = await Word.findById(req.params.id);
         return res.json(word);
     },
-    
+    async home(req, res){
+        const word = await Word.findOne();
+        return res.json(word);
+    },
     
 }
 

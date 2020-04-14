@@ -26,7 +26,6 @@ export default class Main extends Component{
     loadWords = async()=>{
         const response = await api.get("/words");
         this.setState({words:response.data})
-        console.log(response)
     };
 
     

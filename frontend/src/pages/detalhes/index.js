@@ -22,7 +22,7 @@ export default class Detalhes extends Component{
                <p><a>Translate: </a>{word.wordPortuguese}</p>
                <p><a>Description: </a>{word.Description}</p>
                <p><a>Synonymous: </a>{word.Syno}</p>
-               <Link className="btn" to={'/'}>Voltar</Link>
+               <Link className="btn" to={'/lista'}>Voltar</Link>
            </div>
         );
     }

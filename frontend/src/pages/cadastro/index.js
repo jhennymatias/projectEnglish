@@ -33,7 +33,7 @@ export default function NewWord() {
             <div className="content">
                 <section className = "form">
                     <h1>Cadastrar nova palavra</h1>
-                    <Link className="back-link" to = "/"> Voltar </Link>
+                    <Link className="back-link" to = "/lista"> Voltar </Link>
                 </section>
                     
                 <form  onSubmit = {handleNewWord} >
