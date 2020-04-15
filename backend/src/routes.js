@@ -9,4 +9,5 @@ routes.post('/words', wordController.store);
 routes.put('/words/:id', wordController.update);
 routes.delete('/words/:id', wordController.destroy);
 routes.get('/wordss', wordController.home);
+routes.get('/test', wordController.test);
 module.exports = routes;

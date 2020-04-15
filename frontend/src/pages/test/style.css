@@ -1,0 +1,33 @@
+
+.word-list{
+    margin: 32px auto 0;
+    padding: 0 30px;
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+}
+
+.word-list button{
+    height: 50px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 5px;
+    color:#fff;
+    background-color: #054f77;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.word-list button:hover{
+    border: 2px solid #054f77;
+    background-color: #fff;
+    color: #054f77;
+}

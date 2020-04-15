@@ -27,6 +27,10 @@ module.exports = {
         const word = await Word.findOne();
         return res.json(word);
     },
+    async test(req, res){
+        const word = await Word.find();
+        return res.json(word);
+    },
     
 }
 
