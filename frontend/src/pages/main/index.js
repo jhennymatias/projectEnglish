@@ -36,7 +36,8 @@ export default class Main extends Component{
             <div className= "tudo">
                 <div className="novobtn">
                     <Link className = "btn" to = "/cadastro"> Cadastrar nova palavra</Link>
-                </div>
+                    <Link className = "btn" to = "/test">Testar meus conhecimentos</Link>
+              </div>
                 <div className="word-list">
                 
                     {this.state.wordEnglish}

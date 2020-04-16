@@ -7,14 +7,17 @@ export default class Test extends Component{
     state ={
         pergunta:[],
         respostas: [],
-        id:
     };
     componentDidMount(){
         this.loadWords();
     }
 
     Verifica = async(id) =>{
-        console.log(id)
+        if(id === this.state.pergunta._id){
+            alert("Certa Resposta!");
+        }else{
+            alert("Errado!")
+        }
     }
 
     loadWords = async()=>{
@@ -22,6 +25,7 @@ export default class Test extends Component{
         const response2 = await api.get("/wordss");
         this.setState({pergunta:response2.data});
         this.setState({respostas:response.data});
+        
     };
 
     
@@ -33,10 +37,12 @@ export default class Test extends Component{
                 <div className="pergunta">
                     <h1>{this.state.pergunta.wordEnglish}</h1>
                 </div>
-                <div className="word-list">
+                <div className="aswer">
                     {respostas.map(resposta =>(
                     <div key={resposta._id}>
-                        <button onClick={this.Verifica(resposta._id)}>{resposta.wordPortuguese}</button>
+                        <button onClick = {() => this.Verifica(resposta._id)} type="button">
+                        {resposta.wordPortuguese}
+                        </button> 
                     </div>
                     ))}
                 </div>
