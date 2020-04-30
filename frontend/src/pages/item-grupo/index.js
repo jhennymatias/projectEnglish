@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import api from '../../services/api';
 import './style.css';
 import {Link} from 'react-router-dom';
+
+import {FiTrash2, FiPlusCircle, FiBookOpen, FiCheckCircle} from "react-icons/fi";
 
 export default class Detalhes extends Component{
     state ={
@@ -22,7 +24,14 @@ export default class Detalhes extends Component{
     render(){
         const {words} =this.state;
         return(
-           <div className="word-list">
+            <Fragment>
+                <div className="header">
+                    <h2>Project English</h2>
+                    <Link className = "btn-header" to = "/cadastro"><FiPlusCircle size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/test"><FiCheckCircle size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/grupo"><FiBookOpen size={25} color = "#0073FB"/></Link>    
+                </div>
+                <div className="word-list">
                      {this.state.wordEnglish}
                  {words.map(word =>(
                     <article key={word._id}>
@@ -32,7 +41,8 @@ export default class Detalhes extends Component{
                         <p>Synonymous: {word.Syno}</p>
                     </article>
                  ))}    
-           </div>
+                </div>
+            </Fragment> 
         );
     }
 }
