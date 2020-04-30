@@ -14,7 +14,16 @@ mongoose.connect(
 });
 
 requireDir('./src/models');
-
+const Pa = mongoose.model('Word');
+app.get("/", (req, res)=>{
+    Pa.create({
+        wordEnglish: "teste",
+        wordPortuguese:'teste',
+        Description:'teste',
+        Syno: 'teste',
+        Tag: 'teste'
+    })
+});
 app.use('/', require('./src/routes'));
 
 app.listen(3322);

@@ -17,6 +17,10 @@ const WordSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Tag:{
+        type: String,
+        required:true
+    }
 });
 
 mongoose.model('Word', WordSchema);

@@ -31,13 +31,19 @@ module.exports = {
         const word = await Word.find();
         return res.json(word);
     },
+
+    async tag(req, res){
+        const word = await Word.distinct('Tag')
+        return res.json(word);
+    },
+
+    async buscatag(req, res){
+        const word = await Word.find({'Tag':req.params.Tag})
+        return res.json(word);
+    },
     
 }
 
-
-
-
-   
 
 
 

@@ -9,8 +9,9 @@ export default class Detalhes extends Component{
     };
 
     async componentDidMount(){
-        const { id } = this.props.match.params;
-        const response = await api.get(`words/${id}`);
+        const { Tag } = this.props.match.params.tag;
+        console.log({Tag});
+        const response = await api.get(`subtag/${Tag}`);
         this.setState({word: response.data});
     }
 

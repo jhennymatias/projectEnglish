@@ -4,6 +4,8 @@ const routes = express.Router();
 const wordController = require('./controllers/wordController');
 
 routes.get("/words", wordController.index);
+routes.get("/tag", wordController.tag);
+routes.get("/subtag/:tag", wordController.buscatag);
 routes.get('/words/:id', wordController.show);
 routes.post('/words', wordController.store);
 routes.put('/words/:id', wordController.update);

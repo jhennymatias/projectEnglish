@@ -8,6 +8,7 @@ export default function NewWord() {
     const[wordPortuguese, setwordPortuguese] = useState('')
     const[Description, setDescription] = useState('')
     const[Syno, setSyno] = useState('')
+    const[Tag, setTag] = useState('')
     const history = useHistory();
 
     async function handleNewWord(e){
@@ -18,6 +19,7 @@ export default function NewWord() {
             wordPortuguese,
             Description,
             Syno,
+            Tag,
         };
 
         try{
@@ -38,27 +40,37 @@ export default function NewWord() {
                     
                 <form  onSubmit = {handleNewWord} >
                         <input 
+                            id = 'english'
                             placeholder="Word English"
                             value = {wordEnglish}
                             onChange = {e => setwordEnglish(e.target.value)}
                         />
                         <input 
+                            id = 'portuguese'
                             placeholder="Word Portuguese"
                             value = {wordPortuguese}
                             onChange = {e => setwordPortuguese(e.target.value)}
                         />
                         <textarea 
+                            id = 'description'
                             placeholder="Description"
                             value = {Description}
                             onChange = {e => setDescription(e.target.value)}
                         ></textarea>
                         <input  
+                            id = 'syno'
                             placeholder="Synonymus"
                             value = {Syno}
                             onChange = {e => setSyno(e.target.value)}
                         />
+                        <input  
+                            id = 'tag'
+                            placeholder="Tag"
+                            value = {Tag}
+                            onChange = {e => setTag(e.target.value)}
+                        />
                         
-                        <button type="submit" className= "btn">Register</button>
+                        <button type="submit" id="btn_e"className= "btn">Register</button>
                 </form>
             </div>
         </div>

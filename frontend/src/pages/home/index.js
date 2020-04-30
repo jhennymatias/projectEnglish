@@ -26,7 +26,7 @@ export default class Home extends Component{
         this.setState({cont: id.data.length})
         const aux = this.geraNumero()
         console.log(aux);
-        const response = await api.get(`/words/${id.data[aux]._id}`);
+        const response = await api.get(`/words/${id.data[0]._id}`);
         this.setState({words:response.data})
     };
 
@@ -41,9 +41,10 @@ export default class Home extends Component{
                     
                         <article>
                                 <strong>{this.state.words.wordEnglish}</strong> 
-                                <p>{this.state.words.wordPortuguese}</p>
-                                <p>{this.state.words.Description}</p>
-                                <p>{this.state.words.Syno}</p>
+                                <p>Translate: {this.state.words.wordPortuguese}</p>
+                                <p>Description: {this.state.words.Description}</p>
+                                <p>Synonymus: {this.state.words.Syno}</p>
+                                <p>Tag: {this.state.words.Tag}</p>
                         </article> 
                 </div>
                 <div className="novobtn">
