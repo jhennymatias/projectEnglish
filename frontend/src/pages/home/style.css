@@ -1,22 +1,11 @@
-.tudo{
-    text-align: center;
-    align-items: center;
-    display: inline;
-    justify-content: center;
-}
-
-.tudo h1{
-    font-size: 40px;
-    text-align: center;
-    padding: 40px;
-}
 .word{
     max-width: 700px;
     margin: 20px auto 0;
     padding: 20px;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 12px;
     border: 1px solid #dddddd;
+    text-align: left;
 }
 .word article{
     align-items: center;
@@ -25,39 +14,24 @@
     padding:20px;
     margin-bottom:20px;
     font-size: 35px;
-    align-items: center;
-    text-align: center;
     position: relative;
+
+    text-align: center;
 }
 
 .word p{
-    color: #666;
     font-size:20px;
     line-height: 24px;
     margin-top: 10px;
 }
-
-.word p a{
-    color: black;
-}
-
-.novoBtn{
-    height: 42px;
-    border-radius: 5px;
-    border: 2px solid #0073FB;
-    background-color: none;
-    margin-top: 10px;
-    color: #054f77;
+.word strong{
+    color: #0073FB;
+    font-size: 40px;
     font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s;
-
 }
 
-.novoBtn:hover{
-    filter: brightness(90%);
+h1{
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
 }

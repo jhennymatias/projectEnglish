@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import './style.css'
 import {Link, useHistory} from 'react-router-dom';
 import api from '../../services/api'
+import {FiList, FiBookOpen, FiCheckCircle} from "react-icons/fi";
 
 export default function NewWord() {
     const[wordEnglish, setwordEnglish] = useState('')
@@ -30,49 +31,52 @@ export default function NewWord() {
         history.push('/');
     }
     return (
-        
-        <div className = "word-container">
+        <Fragment>
+            <div className="header">
+                <h2>Project English</h2>
+                <Link className = "btn-header" to = "/lista"><FiList size={25} color = "#0073FB"/></Link>
+                <Link className = "btn-header" to = "/test"><FiCheckCircle size={25} color = "#0073FB"/></Link>
+                <Link className = "btn-header" to = "/grupo"><FiBookOpen size={25} color = "#0073FB"/></Link>    
+            </div>
             <div className="content">
                 <section className = "form">
-                    <h1>Cadastrar nova palavra</h1>
-                    <Link className="back-link" to = "/lista"> Voltar </Link>
-                </section>
-                    
+                    <h1>Register words</h1>
+                    <p>The more words you register the more you will be learning.</p>
+                </section>      
                 <form  onSubmit = {handleNewWord} >
-                        <input 
-                            id = 'english'
-                            placeholder="Word English"
-                            value = {wordEnglish}
-                            onChange = {e => setwordEnglish(e.target.value)}
-                        />
-                        <input 
-                            id = 'portuguese'
-                            placeholder="Word Portuguese"
-                            value = {wordPortuguese}
-                            onChange = {e => setwordPortuguese(e.target.value)}
-                        />
-                        <textarea 
-                            id = 'description'
-                            placeholder="Description"
-                            value = {Description}
-                            onChange = {e => setDescription(e.target.value)}
-                        ></textarea>
-                        <input  
-                            id = 'syno'
-                            placeholder="Synonymus"
-                            value = {Syno}
-                            onChange = {e => setSyno(e.target.value)}
-                        />
-                        <input  
-                            id = 'tag'
-                            placeholder="Tag"
-                            value = {Tag}
-                            onChange = {e => setTag(e.target.value)}
-                        />
-                        
-                        <button type="submit" id="btn_e"className= "btn">Register</button>
+                    <input 
+                        id = 'english'
+                        placeholder="Word English"
+                        value = {wordEnglish}
+                        onChange = {e => setwordEnglish(e.target.value)}
+                    />
+                    <input 
+                        id = 'portuguese'
+                        placeholder="Word Portuguese"
+                        value = {wordPortuguese}
+                        onChange = {e => setwordPortuguese(e.target.value)}
+                    />
+                    <textarea 
+                        id = 'description'
+                        placeholder="Description"
+                        value = {Description}
+                        onChange = {e => setDescription(e.target.value)}
+                    ></textarea>
+                    <input  
+                        id = 'syno'
+                        placeholder="Synonymus"
+                        value = {Syno}
+                        onChange = {e => setSyno(e.target.value)}
+                    />
+                    <input  
+                        id = 'tag'
+                        placeholder="Tag"
+                        value = {Tag}
+                        onChange = {e => setTag(e.target.value)}
+                    />
+                    <button type="submit" id="btn_e"className= "btn">Register</button>
                 </form>
             </div>
-        </div>
+        </Fragment>
     );
 } 

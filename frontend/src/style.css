@@ -12,6 +12,7 @@ body{
     font: 400 18px Roboto, sans-serif;
     background-color: #F8F7F7;
     -webkit-font-smoothing: antialiased;
+    color: #4d4d4d;
 }
 
 input, button, textarea{

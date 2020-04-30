@@ -6,7 +6,7 @@ import Cadastro from './pages/cadastro';
 import Home from './pages/home';
 import Grupo from './pages/grupos';
 import itemG from './pages/item-grupo';
-import Test from './pages/test';
+import Test from './pages/teste';
 const Routes = () => (
     <BrowserRouter>
         <Switch>

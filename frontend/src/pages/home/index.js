@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import api from '../../services/api';
 import './style.css';
 import {Link} from 'react-router-dom';
 
+import {FiList, FiPlusCircle, FiBookOpen} from "react-icons/fi";
 
 export default class Home extends Component{
     state ={
@@ -34,23 +35,25 @@ export default class Home extends Component{
     
     render(){
         return( 
-            <div className="tudo">
-                <h1>Word Day</h1>
-           
-                <div className= "word">
-                    
-                        <article>
-                                <strong>{this.state.words.wordEnglish}</strong> 
-                                <p>Translate: {this.state.words.wordPortuguese}</p>
-                                <p>Description: {this.state.words.Description}</p>
-                                <p>Synonymus: {this.state.words.Syno}</p>
-                                <p>Tag: {this.state.words.Tag}</p>
-                        </article> 
+            <Fragment>
+                <div className="header">
+                    <h2>Project English</h2>
+                    <Link className = "btn-header" to = "/lista"><FiList size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/grupo"><FiBookOpen size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/cadastro"><FiPlusCircle size={25} color = "#0073FB"/></Link>    
                 </div>
-                <div className="novobtn">
-                        <Link className = "btn" to = "/lista">Ver todas as palavras</Link>
-                    </div>
-            </div>
+                <div className= "word">
+                    <article>
+                        <strong>{this.state.words.wordEnglish}</strong> 
+                        <p>Translate: {this.state.words.wordPortuguese}</p>
+                        <p>Description: {this.state.words.Description}</p>
+                        <p>Synonymus: {this.state.words.Syno}</p>
+                        <p>Tag: {this.state.words.Tag}</p>
+                    </article> 
+                    <Link className = "btn" to = "/lista">Access the full word list</Link>
+                </div>
+               
+            </Fragment>
         )
     }
 }

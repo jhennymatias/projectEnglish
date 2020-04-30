@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import api from '../../services/api';
 import './style.css';
 import {Link} from 'react-router-dom';
-
+import {FiList, FiPlusCircle, FiBookOpen} from "react-icons/fi";
 
 export default class Test extends Component{
     state ={
@@ -42,9 +42,15 @@ export default class Test extends Component{
         const {respostas} =this.state;
         
         return(
-            <div className="tudo">    
+            <Fragment> 
+                <div className="header">
+                    <h2>Project English</h2>
+                    <Link className = "btn-header" to = "/lista"><FiList size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/grupo"><FiBookOpen size={25} color = "#0073FB"/></Link>
+                    <Link className = "btn-header" to = "/cadastro"><FiPlusCircle size={25} color = "#0073FB"/></Link>    
+                </div>
                 <div className="pergunta">
-                    <h1>{this.state.pergunta.wordEnglish}</h1>
+                    <h1>What is the meaning of the word {this.state.pergunta.wordEnglish} ?</h1>
                 </div>
                 <div className="aswer">
                     {respostas.map(resposta =>(
@@ -55,11 +61,7 @@ export default class Test extends Component{
                     </div>
                     ))}
                 </div>
-                <div className="voltar">
-                    <Link className="back-link" to={'/lista'}>Voltar</Link>
-                </div>
-                
-            </div>
+            </Fragment>
         )
     }
 }
