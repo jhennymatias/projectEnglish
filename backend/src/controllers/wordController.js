@@ -38,7 +38,8 @@ module.exports = {
     },
 
     async buscatag(req, res){
-        const word = await Word.find({'Tag':req.params.Tag})
+        const aux = req.params.tag;
+        const word = await Word.find({'Tag': aux})
         return res.json(word);
     },
     
